@@ -13,6 +13,11 @@ export default function Textfield(props) {
     setText(newtext);
   };
 
+  const Cleartext = () => {
+    //console.log("Upper case was clikced" + text);
+    //let newtext = text.toLowerCase();
+    setText("");
+  };
   const handlOnChange = (event) => {
     //console.log("On Change");
     setText(event.target.value);
@@ -37,6 +42,9 @@ export default function Textfield(props) {
         </button>
         <button className="btn btn-primary mx-2" onClick={handleLoClick}>
           conert to Lowercase
+        </button>
+        <button className="btn btn-primary mx-2" onClick={Cleartext}>
+          Clear
         </button>
         <div className="container">
           <h2>Your text summary</h2>
