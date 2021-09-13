@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./Component/Navbar";
 //import Textfield from "./Component/Textfield";
-import about from "./Component/about";
+import About from "./Component/About";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <div className="container my-3">
         {/*<Textfield heading="Enter your text here" />*/}
         {/*<Textfield />*/}
-        <about />
+        <About />
       </div>
     </>
   );
