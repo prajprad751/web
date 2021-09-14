@@ -5,23 +5,27 @@ export default function Textfield(props) {
     //console.log("Upper case was clikced" + text);
     let newtext = text.toUpperCase();
     setText(newtext);
+    props.showAlert("Converted to Upper case", "success");
   };
 
   const handleLoClick = () => {
     //console.log("Upper case was clikced" + text);
     let newtext = text.toLowerCase();
     setText(newtext);
+    props.showAlert("Converted to Lower case", "success");
   };
 
   const Cleartext = () => {
     //console.log("Upper case was clikced" + text);
     //let newtext = text.toLowerCase();
     setText("");
+    props.showAlert("Text area erased", "success");
   };
 
   const handleExtraSpce = () => {
     let newtext = text.split(/[ ]+/);
     setText(newtext.join(" "));
+    props.showAlert("Extra space has been cleared", "success");
   };
 
   const handlOnChange = (event) => {
