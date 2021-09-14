@@ -9,8 +9,10 @@ function App() {
   const toggleMode = () => {
     if (mode === "light") {
       setmode("dark");
+      document.body.style.background = "#051b31";
     } else {
       setmode("light");
+      document.body.style.background = "white";
     }
   };
 
@@ -19,8 +21,8 @@ function App() {
       {<Navbar mode={mode} toggleMode={toggleMode} />}
       {/*<Navbar/>*/}
       <div className="container my-3">
-        {/*<Textfield heading="Enter your text here" />*/}
-        {<Textfield />}
+        {<Textfield heading="Enter your text here" mode={mode} />}
+        {/*<Textfield mode={mode} />*/}
         {/*<About />*/}
       </div>
     </>
