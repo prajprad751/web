@@ -57,16 +57,16 @@ export default function Textfield(props) {
             rows="8"
           ></textarea>
         </div>
-        <button className="btn btn-primary mx-2" onClick={handleUpClick}>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleUpClick}>
           Convert to uppercase
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleLoClick}>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleLoClick}>
           conert to Lowercase
         </button>
-        <button className="btn btn-primary mx-2" onClick={Cleartext}>
+        <button className="btn btn-primary mx-2 my-1" onClick={Cleartext}>
           Clear
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleExtraSpce}>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleExtraSpce}>
           Remove extra space
         </button>
         <div

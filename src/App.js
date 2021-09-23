@@ -2,7 +2,7 @@ import "./App.css";
 import Navbar from "./Component/Navbar";
 import Textfield from "./Component/Textfield";
 import Alert from "./Component/Alert";
-//import About from "./Component/About";
+import About from "./Component/About";
 import React, { useState } from "react";
 
 function App() {
@@ -47,7 +47,7 @@ function App() {
           />
         }
         {/*<Textfield mode={mode} />*/}
-        {/*<About />*/}
+        <About />
       </div>
     </>
   );
