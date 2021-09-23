@@ -77,9 +77,20 @@ export default function Textfield(props) {
         >
           <h2>Your text summary</h2>
           <p>
-            {text.split(" ").length} words and {text.length} Characters
+            {
+              text.split(" ").filter((Element) => {
+                return Element.length !== 0;
+              }).length
+            }{" "}
+            words and {text.length} Characters
           </p>
-          <p>{0.008 * text.split(" ").length} Minutes to read</p>
+          <p>
+            {0.008 *
+              text.split(" ").filter((Element) => {
+                return Element.length !== 0;
+              }).length}{" "}
+            Minutes to read
+          </p>
           <h2>Preview</h2>
           <p>
             {text.length > 0
