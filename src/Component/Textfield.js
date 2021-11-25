@@ -23,7 +23,7 @@ export default function Textfield(props) {
   };
 
   const handleExtraSpce = () => {
-    let newtext = text.split(/[ ]+/);
+    let newtext = text.split(/\s+/);
     setText(newtext.join(" "));
     props.showAlert("Extra space has been cleared", "success");
   };
@@ -78,7 +78,7 @@ export default function Textfield(props) {
           <h2>Your text summary</h2>
           <p>
             {
-              text.split(" ").filter((Element) => {
+              text.split(/\s+/).filter((Element) => {
                 return Element.length !== 0;
               }).length
             }{" "}
@@ -86,7 +86,7 @@ export default function Textfield(props) {
           </p>
           <p>
             {0.008 *
-              text.split(" ").filter((Element) => {
+              text.split(/\s+/).filter((Element) => {
                 return Element.length !== 0;
               }).length}{" "}
             Minutes to read

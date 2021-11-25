@@ -5,6 +5,8 @@ import Alert from "./Component/Alert";
 import About from "./Component/About";
 import React, { useState } from "react";
 
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 function App() {
   const [mode, setmode] = useState("light");
   const toggleMode = () => {
@@ -35,20 +37,29 @@ function App() {
 
   return (
     <>
-      {<Navbar mode={mode} toggleMode={toggleMode} />}
-      {<Alert alert={alert} />}
-      {/*<Navbar/>*/}
-      <div className="container my-3">
-        {
-          <Textfield
-            showAlert={showAlert}
-            heading="Enter your text here"
-            mode={mode}
-          />
-        }
-        {/*<Textfield mode={mode} />*/}
-        <About />
-      </div>
+      <Router>
+        {<Navbar mode={mode} toggleMode={toggleMode} />}
+        {<Alert alert={alert} />}
+        {/*<Navbar/>*/}
+
+        <div className="container my-3">
+          <Switch>
+            <Route exact path="/about">
+              <About />
+            </Route>
+            <Route exact path="/">
+              <Textfield
+                showAlert={showAlert}
+                heading="Enter your text here"
+                mode={mode}
+              />
+            </Route>
+          </Switch>
+
+          {/*<Textfield mode={mode} />*/}
+          {/* <About /> */}
+        </div>
+      </Router>
     </>
   );
 }
